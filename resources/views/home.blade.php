@@ -8,13 +8,13 @@
             <div class="card-header">Dashboard {!! auth()->user()->isAdmin == 1 ?'Admin' : 'User' !!}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
+                    @if (session('errors'))
                         <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                            {{ session('errors') }}
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{!! url('/students') !!}">All Students</a>
                 </div>
             </div>
         </div>
